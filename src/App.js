@@ -1,16 +1,11 @@
 import './App.css';
 import { Component } from 'react';
-import Dispatch from './dispatch.js';
+// import Dispatch from './dispatch.js';
 import { forFactory } from './models/myComponents';
 import ComponentListInterface from './componentListNPM/componentListInterface';
-import auth from './services/auth';
+// import auth from './services/auth';
 import ThemeFactory from './componentListNPM/themes/themeFactory';
-import RoutinePage from './view/routine/RoutinePage';
-// icons
-import calendarIcon from './icons/calendar.svg';
-import chatIcon from './icons/chat.svg';
-import dashboardIcon from './icons/dashboard.svg';
-import studentIcon from './icons/students.svg';
+
 import navThemeFactory from './componentListNPM/navThemes/navThemeFactory';
 import EncounterPage from './view/encounterPage';
 import { mapInterface } from './mapTech/mapComponentInterface';

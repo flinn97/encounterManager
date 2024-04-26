@@ -1,5 +1,5 @@
 import BaseClass from "../componentListNPM/baseClass";
-import auth from "../services/auth.js";
+// import auth from "../services/auth.js";
 import moment from 'moment';
 class componentBase extends BaseClass {
     constructor(opps) {
@@ -103,7 +103,7 @@ class Card extends componentBase {
     async getPicSrc(path) {
         let obj = {}
         for (const key in path) {
-            let pic = await auth.downloadPics(path[key]);
+            let pic = ""//await auth.downloadPics(path[key]);
             obj["media" + this.createUUID(3)] = pic;
         }
         obj = { ...obj, ...this.json.picURLs }
@@ -127,7 +127,7 @@ class AssignedCard extends componentBase {
     async getPicSrc(path) {
         let obj = {}
         for (const key in path) {
-            let pic = await auth.downloadPics(path[key]);
+            let pic = ""//await auth.downloadPics(path[key]);
             obj["media" + this.createUUID(3)] = pic;
         }
         obj = { ...obj, ...this.json.picURLs }
@@ -149,7 +149,7 @@ class Routine extends componentBase {
     async getPicSrc(path) {
 
 
-        let pic = await auth.downloadPics(path);
+        let pic = ""//await auth.downloadPics(path);
 
 
 
