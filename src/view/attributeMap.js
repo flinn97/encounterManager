@@ -15,7 +15,7 @@ export default class AttributeMap extends Component {
     render(){
       let app = this.props.app
       let obj = this.props.obj;
-      return(
+      return( 
       <div>
         <Armor app={app} obj={obj}/>
         <HitPoints app={app} obj={obj}/>
