@@ -6,6 +6,7 @@ import Initiative from "./initiativeRoll";
 import ProfilePic from "./profilePic";
 import AttributeMap from "./attributeMap";
 import Name from "./name";
+import Duplicate from "./duplicate";
  
 export default class MonsterList extends Component {
     constructor(props){
@@ -20,7 +21,7 @@ export default class MonsterList extends Component {
       let state = app.state;
       console.log(state);
       return(
-        <MapComponent type="monsterList" app={app} name="participant" cells={[{custom:Initiative, type:"custom"}, {custom:ProfilePic, type:"custom"},{custom:Name, type:"custom"},{custom:AttributeMap, type:"custom"},{custom:Condition, type:"custom"},"del" ]} filter={{search:state.currentEncounter?.getJson()._id,attribute:"encounterId"}}/>      )
+        <MapComponent type="monsterList" app={app} name="participant" cells={[{custom:Initiative, type:"custom"}, {custom:ProfilePic, type:"custom"},{custom:Name, type:"custom"},{custom:AttributeMap, type:"custom"},{custom:Condition, type:"custom"},{custom:Duplicate, type:"custom"},"del" ]} filter={{search:state.currentEncounter?.getJson()._id,attribute:"encounterId"}}/>      )
       
     }
   }

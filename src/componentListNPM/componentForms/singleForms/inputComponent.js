@@ -34,6 +34,12 @@ class InputFormComponent extends Component {
         await this.setState({value:!this.state.value})
         this.props.objDispatch(this.state.value);
     }
+    componentDidUpdate(props, state){
+        if(this.props.value!==props.value){
+            this.setState({value:this.props.value})
+        }
+
+    }
 
     componentDidMount() {
         document.addEventListener('mousedown', this.handleClickOutside);

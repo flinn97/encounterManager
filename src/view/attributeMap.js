@@ -14,13 +14,14 @@ export default class AttributeMap extends Component {
   
     render(){
       let app = this.props.app
+      let obj = this.props.obj;
       return(
       <div>
-        <Armor/>
-        <HitPoints/>
-        <ParticipantNotes/>
+        <Armor app={app} obj={obj}/>
+        <HitPoints app={app} obj={obj}/>
+        <ParticipantNotes app={app} obj={obj}/>
         
-        {/* <MapComponent name="participant" cells={[{custom:Armor, type:"custom"},{custom:HitPoints, type:"custom"},{custom:ParticipantNotes, type:"custom"}]}/> */}
+        
         </div>
         )
       }
