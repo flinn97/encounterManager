@@ -8,20 +8,33 @@ export default class DetailsDisplay extends Component{
   
   
     }
+
+    convertStringToLink = (string) => {
+      if (!string) return '';
+    
+      const trimmedString = string.trim();
+      const hasProtocol = /^https?:\/\//i.test(trimmedString);
+    
+      return hasProtocol ? trimmedString : 'https://' + trimmedString;
+    }
+    
   
   
     render(){
       let app = this.props.app
       let state = app.state
       let encounter = state.currentEncounter
+
+      let audioLink = convertStringToLink(encounter?.getJson().audio ? encounter.getJson().audio:encounter.getJson().audioLink);
+
       return(<div>
       <div className='info'>
         {encounter.getJson().description}
       </div>
 
-      <div className='info'>
-        {encounter.getJson().audioLink}
-      </div>
+      <a className='info'>
+        {audioLink}
+      </a>
       </div>)
       }
   }
