@@ -6,6 +6,7 @@ import "./css/defaultColumn.css";
 import "./css/defaultRow.css";
 import "./css/defaultRowWrap.css";
 import "./css/interactiveMapTheme.css"
+import adventureLogStyles from "../../componentListNPM/themes/adventureLogStyles";
 
 /**
  * factory for getting different themes for the map component
@@ -22,7 +23,7 @@ export default class ThemeFactory {
         fileSystem: "",
         dragChangeOrder: "",
         arrowChangeOrder: "",
-
+        adventure: adventureLogStyles.getStylesByScreenSize(),
         
 
 

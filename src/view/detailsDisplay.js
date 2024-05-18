@@ -15,7 +15,13 @@ export default class DetailsDisplay extends Component{
       let state = app.state
       let encounter = state.currentEncounter
       return(<div>
-      <MapComponent name="encounter" cells={["description"]} filter={{search:"", attribute:"encounterId"}}/>
+      <div className='info'>
+        {encounter.getJson().description}
+      </div>
+
+      <div className='info'>
+        {encounter.getJson().audioLink}
+      </div>
       </div>)
       }
   }

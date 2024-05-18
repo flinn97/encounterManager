@@ -22,9 +22,9 @@ export default class RunEncounter extends Component {
       {this.state.start === false ? (<div onClick={()=>{
         encounter.getHighestParticipant(componentList)
         this.setState({start:true})
-        }}>run</div>):(<div onClick={()=>{encounter.clearParticipant()
+        }}>Run</div>):(<div onClick={()=>{encounter.clearParticipant()
           this.setState({start:false})
-        }}>stop</div>)}
+        }}>Stop</div>)}
       {this.state.start === true && <div onClick={async ()=>{
         debugger
         let participant = await encounter.getHighestParticipant(componentList);
@@ -33,7 +33,7 @@ export default class RunEncounter extends Component {
         let ruleset = componentList.getComponent("ruleset", currentRulesetName, "name")
         participant.updateConditions(ruleset)
         
-      }}>next</div>}
+      }}>Next</div>}
      
       </div>
     )

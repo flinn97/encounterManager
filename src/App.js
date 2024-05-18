@@ -54,7 +54,7 @@ export default class App extends Component {
       login: false,
       backend: false,
       myswitch: "home",
-      defaultTheme: "dreamMaker",
+      defaultTheme: "adventure",
       globalTheme: "",
       currentStudent: undefined,
       currentRoutine: undefined,
