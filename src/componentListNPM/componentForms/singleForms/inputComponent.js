@@ -122,8 +122,10 @@ class InputFormComponent extends Component {
 
 
         return (
-            <div ref={this.wrapperRef} style={this.props.wrapperStyle?this.props.wrapperStyle:theme!==undefined? theme.wrapperStyle:undefined} className={this.props.wrapperClass}>
-                {this.props.label && (<label style={this.props.labelStyle?this.props.labelStyle:theme!==undefined? theme.labelStyle:undefined} className={this.props.labelClass}>{this.props.label}</label>)}
+            <div ref={this.wrapperRef} style={this.props.wrapperStyle?this.props.wrapperStyle:theme!==undefined? theme.wrapperStyle:undefined} 
+            className={this.props.wrapperClass}>
+                {this.props.label && (<label style={this.props.labelStyle?this.props.labelStyle:theme!==undefined? theme.labelStyle:undefined} 
+                className={this.props.labelClass}>{this.props.label}</label>)}
                 {inputType[this.props.input]}
                 <div className="componentErrorMessage" >{this.props.errorMessage}</div>
             </div>

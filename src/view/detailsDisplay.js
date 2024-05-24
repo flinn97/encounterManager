@@ -2,6 +2,7 @@
 import { Component } from 'react';
 import { MapComponent } from '../mapTech/mapComponentInterface';
 import { Link } from 'react-router-dom';
+import sound from '../pics/speaker.png';
 
 export default class DetailsDisplay extends Component {
   constructor(props) {
@@ -37,9 +38,12 @@ export default class DetailsDisplay extends Component {
       </div>
 
       {audioPrev &&
-        (<a className='info Audio-Link' href={audioLink} style={{ marginTop: "-18px" }}>
+        (<div className='Audio-Container' title={audioLink}>
+          <img className="tiny-ico" src={sound} alt="Sound Icon"/>
+        <a className='info Audio-Link' href={audioLink} style={{ marginTop: "-18px" }}>
           {audioPrev}
         </a>
+        </div>
         )
         ||
         (

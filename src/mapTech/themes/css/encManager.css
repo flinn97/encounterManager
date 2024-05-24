@@ -32,6 +32,77 @@
   --color-black: #0f141c;
 }
 
+.Participant-Container{
+  display: flex;
+  flex-direction: column;
+}
+
+.ER-Map-Section {
+  display: flex;
+  font-family: "inria";
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(#e6646500, #b0c9df09);
+  position: relative;
+  margin-top: 12px;
+  width:93vw;
+  max-height: 160px;
+  min-height: 160px;
+  border-radius: 21px;
+  border: 1px solid #b0c9df09;
+}
+
+.condition-gear{
+  border: 1px solid var(--color-gray);
+  padding: 7px 8px;
+  border-radius: 11px;
+  width: 44px;
+  object-fit: scale-down;
+}
+
+.ER-Map-Section:hover {
+  background: linear-gradient(#649ce60a, #b0c9df0c);
+
+}
+
+.Condition-Container{
+  font-family: 'inria', serif;
+  display: flex;
+  width: 50vw;
+  background: linear-gradient(var(--color-black),var(--color-dark));
+  border-radius: 11px;
+  position: absolute;
+  left: -25vw;
+  top: -56px;
+  flex-direction: column;
+  min-height: 158px;
+  border: 2px solid var(--color-gray);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.Condition-Section{
+  font-family: 'inria', serif;
+  padding: 11px 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: fit-content;
+  line-height: 30px;
+}
+
+.condition{
+  font-family: 'inria', serif;
+  border-radius: 1px solid var(--app-color-red-dark);
+  color: var(--app-color-gold-dark);
+  margin: 21px;
+  background: #1B1D24;
+  padding: 3px 6px;
+  border-radius: 11px;
+}
+
 .Background-Content {
   font-family: 'inria', serif;
   display: flex;
@@ -44,6 +115,7 @@
   width: 100%;
   height: fit-content;
   z-index: 20;
+  padding: 2px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -61,6 +133,7 @@ body {
   padding-left: 11px;
 }
 
+
 .Header-Title {
   display: flex;
   flex-direction: row;
@@ -70,20 +143,65 @@ body {
   color: var(--color-white);
 }
 
+.label {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.35rem;
+  margin-bottom: -2px;
+  margin-top: 11px;
+  font-family: 'inria', serif;
+  color: var(--color-gold);
+}
+
+.text-form {
+  color: whitesmoke;
+  background: #1B1D2455;
+  box-shadow: 1px 1px 1px var(--color-dark);
+  border: none;
+  border-radius: 8px;
+  font-family: 'inria', serif;
+  font-size: 1.2rem; 
+  padding: 4px;
+  margin-top:8px;
+  margin-left: .8rem;
+}
+
+.text-wide {
+  width: 80%;
+}
+
+.text-form:hover{
+  background: #1B1D2465;
+  color:white;
+}
+
+.Audio-Container {
+  display: flex;
+  align-items: center;
+  margin-top: 41px;
+  margin-left: 8px;
+}
+
+.tiny-ico {
+  width: 1.6rem;
+  margin-right: 1px;
+  margin-top: -33px;
+}
+
 .Audio-Link {
   border-radius: 12px;
   cursor: pointer;
   color: white;
-  padding-bottom: 22px;
   font-family: 'Inria', serif;
   letter-spacing: .045rem;
   font-size: 1.1rem;
   opacity: 1;
   transition: all 0.5s ease-in-out;
+  text-decoration: none; /* To remove underline on link */
 }
 
-.Audio-Link:hover {
-  opacity: .99;
+.Audio-Container:hover {
+  opacity: .62;
   filter: contrast(1.2);
   transition: all 0.5s ease-in-out;
 }
@@ -101,8 +219,8 @@ body {
   font-family: 'inria', serif;
   color: var(--color-white);
   opacity: 100%;
-  background: #0f141c89;
-  padding: 10px;
+  background: #0f141c92;
+  padding: 18px;
   width: 100%;
   border-radius: 24px;
   border-style: solid;
@@ -164,7 +282,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.button:hover {
+.button:hover{
   opacity: .99;
   filter: contrast(1.2);
   border-radius: 11px;
@@ -222,4 +340,77 @@ body {
   font-weight: bold;
   font-size: 1.94rem;
   align-self: flex-start;
+}
+
+/* Style for the container */
+.hover-container {
+  position: relative;
+  overflow: visible;
+  display: inline-block; /* Keeps the container size to the content */
+}
+
+/* Initially hide the div */
+.hover-div {
+  display: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition:all 0.5 ease-in-out; 
+  /* Add other styling as needed */
+}
+
+/* Show the div on hover */
+.hover-container:hover .hover-div {
+  display: block !important;
+}
+
+/* Style for the container */
+.hover-containerInt {
+  position: relative;
+  display: inline-block; /* Keeps the container size to the content */
+}
+
+/* Initially hide the div */
+.hover-divInt {
+  display: none;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  transition:all 0.3s ease; 
+  /* Add other styling as needed */
+}
+
+/* Show the div on hover */
+.hover-containerInt:hover .hover-divInt {
+  display: block;
+}
+
+.Run-Bar {
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 38px;
+  width: 24vw;
+  z-index: 100;
+  padding: 11px;
+  border-radius: 11px;
+  background-color: var(--app-color-dark-lighter);
+  border: 1px solid var(--color-gold);
+  justify-content: space-evenly;
+  box-shadow: 3px 2px 8px black;
+  transition: all 3s;
+}
+
+.Run-Button {
+  color: var(--color-gold);
+  border: 1px solid var(--app-color-gray-lighter);
+}
+
+.Run-Bar:hover {
+  border: 1px solid var(--app-color-gold-dark);
+  box-shadow: 1px 2px 8px black;
+  filter: contrast(1.1);
 }

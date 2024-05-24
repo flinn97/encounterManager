@@ -7,6 +7,7 @@ import ProfilePic from "./profilePic";
 import AttributeMap from "./attributeMap";
 import Name from "./name";
 import Duplicate from "./duplicate";
+import trash from "../pics/delSkull.png";
 
 export default class MonsterList extends Component {
   constructor(props) {
@@ -19,11 +20,22 @@ export default class MonsterList extends Component {
   render() {
     let app = this.props.app;
     let state = app.state;
+    let styles = state.styles;
     console.log(state);
     return (
-      <div style={{ marginTop: "24px", height: "100%" }}>
+      <div style={{ marginTop: "24px",}}>
         <MapComponent
-          type="monsterList"
+        // delOptions={{
+        //   picURL: trash, warningMessage: "Delete",
+        //   textStyle: { fontSize: "1rem" },
+        //   style: {
+        //     width: "35px", height: "35px", padding: "4px 2px",
+        //     display: "flex", flexDirection: "row",
+        //     alignItems: "center", borderRadius: "8px",
+        //     justifyContent: "center"
+        //   },
+        // }}
+          type="monsterList" theme="encounterRow"
           app={app} name="participant"
           cells={[
             { custom: Initiative, type: "custom" },
@@ -31,7 +43,10 @@ export default class MonsterList extends Component {
             { custom: Name, type: "custom" },
             { custom: AttributeMap, type: "custom" },
             { custom: Condition, type: "custom" },
-            { custom: Duplicate, type: "custom" }, "del"]}
+            { custom: Duplicate, type: "custom" },
+            //  "del"
+            // custom component or?
+            ]}
           filter={{ search: state.currentEncounter?.getJson()._id, attribute: "encounterId" }} />
 
       </div>)

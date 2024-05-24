@@ -8,7 +8,7 @@ import '../mapTech/themes/css/encManager.css';
 export default class EncounterPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = { 
             
         }
     }
@@ -17,7 +17,7 @@ export default class EncounterPage extends Component {
         let app = this.props.app;
         let state = app.state;
         return (
-            <div className='body' style={{display:"flex", alignItems:"center", flexDirection:"column", 
+            <div className='body scroller2' style={{display:"flex", alignItems:"center", flexDirection:"column", width:"100%", paddingBottom:"108px", 
 // REMOVE THIS 
 background:"#0f141c"
             }}>

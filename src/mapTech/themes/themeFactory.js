@@ -2,10 +2,12 @@ import { mapping } from "./defaultColumn";
 import { rowMapping } from "./defaultRow";
 import { rowWrapMapping } from "./defaultRowWrap";
 import { interactiveMapTheme } from "./interactiveMapTheme";
+import { encMapping } from "./encRow";
 import "./css/defaultColumn.css";
 import "./css/defaultRow.css";
 import "./css/defaultRowWrap.css";
-import "./css/interactiveMapTheme.css"
+import "./css/interactiveMapTheme.css";
+import "./css/encManager.css";
 import adventureLogStyles from "../../componentListNPM/themes/adventureLogStyles";
 
 /**
@@ -24,7 +26,7 @@ export default class ThemeFactory {
         dragChangeOrder: "",
         arrowChangeOrder: "",
         adventure: adventureLogStyles.getStylesByScreenSize(),
-        
+        encounterRow: encMapping,
 
 
 
