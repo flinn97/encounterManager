@@ -2,7 +2,7 @@ let encMapping={
   MCMapContainer: "Participant-Container",
   MCMapSection: "ER-Map-Section",
   MCLink: "DR-Link",
-  MCCell: "DR-Cell",
+  MCCell: "ER-Cell",
   MCCustomDelItem: "DR-Custom-Del-Item",
   MCDelItem: "DR-Del-Item",
   MCDelImgItem: "DR-Del-imgItem",

@@ -25,7 +25,9 @@ export default class MonsterListWrapper extends BaseClass {
       return (
         <div className= {props.mapContainerClass? props.mapContainerClass: theme.MCMapContainer} style={{...this.props.mapContainerStyle}} >
             {list.map((obj, index)=>
-            <div className={props.mapSectionClass? props.mapSectionClass: theme.MCMapSection} style={{...this.props.mapSectionStyle, background:currentParticipant === obj.getJson()._id && "red" }} key = {index}>
+            <div className={props.mapSectionClass? props.mapSectionClass: theme.MCMapSection+(currentParticipant === obj.getJson()._id ?" gradient-animation":"")} 
+            style={{...this.props.mapSectionStyle, border:currentParticipant === obj.getJson()._id && "2px solid #1E90FF33", boxShadow:currentParticipant === obj.getJson()._id && "-2px -0px 1px #1E90FF88"}} key = {index}>
+              
                 {cells.map((cell, i)=>{
                  let type = cell.type
                 console.log(type);
