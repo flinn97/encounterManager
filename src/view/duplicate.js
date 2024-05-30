@@ -13,11 +13,13 @@ export default class Duplicate extends Component {
       let app= this.props.app
       let state= app.state
       return(
-      <div onClick={()=>{
+      <div 
+      className="button Header-Edit"
+      onClick={()=>{
         debugger
         let json = this.props.obj.getJson();
         state.opps.cleanJsonPrepareRun({"addparticipant": {...json, _id: undefined, }})
-
+        
       }}>
        Duplicate
         </div>

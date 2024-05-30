@@ -74,6 +74,7 @@
 }
 
 .Condition-Container {
+  user-select: none;
   font-family: 'inria', serif;
   display: flex;
   width: 50vw;
@@ -90,24 +91,75 @@
 }
 
 .Condition-Section {
+
   font-family: 'inria', serif;
   padding: 11px 4px;
   display: flex;
+  user-select: none;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   height: fit-content;
-  line-height: 30px;
+  line-height: 34px;
 }
 
 .condition {
   font-family: 'inria', serif;
-  border-radius: 1px solid var(--app-color-red-dark);
-  color: var(--app-color-gold-dark);
-  margin: 21px;
+  user-select: none;
+  border: 1px solid  #292d3b;
+  color: var(--color-white);
+  margin: 6px;
   background: #1B1D24;
-  padding: 3px 6px;
+  padding: 4px 8px;
   border-radius: 11px;
+  font-size: 1rem;
+  opacity: 90%;
+}
+
+.condition:hover {
+ box-shadow: inset -1px -1px #414957;
+}
+
+.condition-selected {
+  font-family: 'inria', serif;
+  border: 1px solid var(--app-color-gold-dark);
+  color: var(--color-white);
+  margin: 6px;
+  background: #1B1D24;
+  padding: 4px 8px;
+  border-radius: 11px;
+  font-size: 1rem;
+}
+
+.condition-selected:hover {
+  box-shadow: inset -1px -1px #cac994;
+  border: 1px solid var(--app-color-gold-dark);
+ }
+
+.condition-active {
+  font-family: 'inria', serif;
+  color:#b8b8b8;
+  /* background: #1B1D24; */
+  padding: 4px 8px;
+  border-radius: 11px;
+  font-size: 1rem;
+}
+
+.condition-active:hover {
+  color:#b8b8b8be;
+}
+
+.Condition-Column{
+  user-select: none;
+  font-family: 'inria', serif;
+  display: flex;
+  width: 35vw;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  line-height: 1rem;
+  height: 160px;
 }
 
 .Background-Content {
@@ -311,13 +363,13 @@ body {
 .roll-button:hover {
   background: linear-gradient(90deg, #282c340c, #45526e27, #677ca811, #282c340c);
   border-radius: 11px;
+  
 }
 
-
 .gradient-animation {
-  background: linear-gradient(235deg, #282c340c, #282c340c, #45526e11, #677ca811, #142f6d0e, #282c340c);
+  background: linear-gradient(90deg, #282c3404, #282c3404, #45526e09, #677ca809, #142f6d04, #282c3404);
   background-size: 200% 200%;
-  animation: gradient-animation 15s ease-in-out infinite;
+  animation: gradient-animation 28s infinite;
   border-radius: 22px;
   position: relative;
   overflow: hidden;
@@ -333,12 +385,12 @@ body {
   height: 200%;
   left: 0;
   z-index: -1;
-  background: linear-gradient(235deg, rgba(255, 255, 255, 0.171), rgba(255, 255, 255, 0));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0));
   width: 9%;
   filter: blur(11px);
   mix-blend-mode: screen;
   opacity: 0.4;
-  animation: shimmer 25s ease-in infinite;
+  animation: shimmer 28s infinite;
 }
 
 @keyframes gradient-animation {
@@ -370,6 +422,7 @@ body {
   filter: contrast(1.2);
   border-radius: 11px;
   transition: all 0.5s ease-in-out;
+  box-shadow: inset -1px -1px #414957;
 }
 
 .button:active {

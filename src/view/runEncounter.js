@@ -1,4 +1,6 @@
 import { Component } from "react";
+import play from "../pics/forward.png";
+import pause from "../pics/pauseInit.png";
 
 
 export default class RunEncounter extends Component {
@@ -19,19 +21,6 @@ export default class RunEncounter extends Component {
 
     return (
       <div className="Run-Bar" style={{userSelect:"none"}}>
-        {this.state.start === false ? (<div
-          className="button Run-Button"
-          onClick={() => {
-            encounter.getHighestParticipant(componentList)
-            this.setState({ start: true })
-          }}>Run</div>)
-
-          :
-
-          (<div onClick={() => {
-            encounter.clearParticipant()
-            this.setState({ start: false })
-          }}>Stop</div>)}
         {this.state.start === true && <div className="button Run-Button" onClick={async () => {
           debugger
           let participant = await encounter.getHighestParticipant(componentList);
@@ -40,7 +29,31 @@ export default class RunEncounter extends Component {
           let ruleset = componentList.getComponent("ruleset", currentRulesetName, "name")
           participant.updateConditions(ruleset)
 
-        }}>Next</div>}
+        }}>Next
+        <img src={play} style={{width:"22px", marginLeft:"12px", marginBottom:"-5px"}}/>
+        </div>}
+        {this.state.start === false ? (<div
+          className="button Run-Button"
+          onClick={() => {
+            encounter.getHighestParticipant(componentList)
+            this.setState({ start: true })
+          }}>Run Encounter
+          
+          </div>)
+
+          :
+
+          (<div 
+            style={{color:"white", border:"1px solid red"}}
+            className="button Run-Button"
+            onClick={() => {
+            encounter.clearParticipant()
+            this.setState({ start: false })
+            
+          }}>Stop
+          <img src={pause} style={{width:"18px", marginLeft:"12px", marginBottom:"-5px"}}/>
+          </div>)}
+        
 
       </div>
     )

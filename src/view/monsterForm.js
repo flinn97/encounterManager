@@ -36,7 +36,7 @@ export default class MonsterForm extends Component {
           let value = e.target.value;
 
           this.setState({ value: value })
-          console.log(e)
+          // console.log(e)
         }}></input>
         <div className="button Add-New-Creature-Button" title="Add to Encounter" onClick={async () => {
 

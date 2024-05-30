@@ -21,7 +21,7 @@ export default class MonsterList extends Component {
     let app = this.props.app;
     let state = app.state;
     let styles = state.styles;
-    console.log(state);
+    // console.log(state);
     return (
       <div style={{ marginTop: "24px",}}>
         <MapComponent
@@ -43,7 +43,7 @@ export default class MonsterList extends Component {
             { custom: Name, type: "custom" },
             { custom: AttributeMap, type: "custom" },
             { custom: Condition, type: "custom" },
-            { custom: Duplicate, type: "custom" },
+            // { custom: Duplicate, type: "custom" },
             //  "del"
             // custom component or?
             ]}
