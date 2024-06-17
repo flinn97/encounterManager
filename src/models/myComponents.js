@@ -329,7 +329,7 @@ class Participant extends componentBase {
         }
         
         //after the for loop update the participant.
-        this.operationsFactory({ update: this })
+        this?.operationsFactory({ update: this })
     }
 }
 

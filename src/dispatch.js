@@ -1,4 +1,5 @@
 import './App.css';
+import '../mapTech/themes/css/encManager.css';
 import { Component } from 'react';
 import logo from './pics/dreamMakerLogo.png'
 // import Home from './view/home';

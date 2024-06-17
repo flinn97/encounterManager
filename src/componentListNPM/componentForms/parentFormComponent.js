@@ -228,6 +228,8 @@ class ParentFormComponent extends Component {
             id={this.props.id}
             theme={this.props.theme}
             inputStyle={this.props.inputStyle}
+            labelClass={this.props.labelClass}
+            wrapperClass={this.props.wrapperClass}
             spellCheck={this.props.spellCheck}
             label={this.props.label}
             type={this.props.differentInputType? this.props.differentInputType: 'text'}
@@ -478,9 +480,9 @@ class ParentFormComponent extends Component {
             prepareOnClick={this.props.prepareOnClick}
             labelStyle={this.props.labelStyle}
             labelClass={this.props.labelClass}
+            wrapperClass={this.props.wrapperClass}
             class={this.props.class}
             onClick={this.props.prepareOnClickFunc? this.props.prepareOnClickFunc:this.prepareOnClick}
-            wrapperClass={this.props.wrapperClass}
             wrapperStyle={this.props.wrapperStyle}
             size={this.props.size}
             selectOptions={this.props.selectOptions}
