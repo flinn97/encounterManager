@@ -13,7 +13,6 @@ export default class Name extends Component {
       let app= this.props.app;
       let obj= this.props.obj;
       console.log(obj)
-      
       return(
       <div>
         <ParentFormComponent app={app} obj={this.props.obj} name="name" cleanPrepareRun={true} class="text-form" 
